@@ -1,0 +1,713 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>TAF - TAF Sverige</title>
+    <meta charset="utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="icon" type="image/png" href="/Content/Images/favicon.png" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,900,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link href="/Content/Vendor/vendor.css?v=3.14.3.0" rel="stylesheet" type="text/css" />
+<link href="/Content/Vendor/Mobiscroll/mobiscroll-1.5.3.min.css" rel="stylesheet" type="text/css" />
+<link href="/Content/Vendor/MegaDropDownMenu/css/megamenu.css?v=3.14.3.0" rel="stylesheet" type="text/css" />
+<link href="/Content/Stylesheets/layout.css?v=3.14.3.0" rel="stylesheet" type="text/css" />
+<link href="/Areas/Security/Content/Stylesheets/Security.css?v=3.14.3.0" rel="stylesheet" type="text/css" />
+<link href="/Areas/FlightPlanning/Content/Stylesheets/FlightPlanning.css?v=3.14.3.0" rel="stylesheet" type="text/css" />
+<link href="/Content/Stylesheets/home.min.css?v=3.14.3.0" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+
+
+<link href="/Areas/FlightPlanning/Content/Stylesheets/FlightPlanning.css?v=3.14.3.0" rel="stylesheet" type="text/css" />
+<link href="/Areas/Links/Content/Stylesheets/ViewLink.css?v=3.14.3.0" rel="stylesheet" type="text/css" />
+
+<!-- Modernizer initieras här för att taggar som t.ex. header och footer ska kunna användas i body -->
+<script src="/Scripts/Vendor/Modernizr/modernizr-2.0.6-development-only.js" type="text/javascript"></script>
+
+<script src="/Scripts/Vendor/jQuery/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="/Scripts/Vendor/jQueryUI/jquery-ui-1.8.16.min.js" type="text/javascript"></script>
+
+
+    <script src="https://kit.fontawesome.com/ea2d13c5ac.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body data-autologoutmessage="Du kommer att loggas ut automatiskt inom fem minuter, tryck OK om du vill forts&#228;tta att vara inloggad."
+      data-autologouttitle="Automatisk utloggning"
+      data-autologouttimeout="1800"
+      data-autologoutvarning="1500"
+      data-autologouturl="/Security/User/LogOff"
+      data-statusurl="/FlightPlanning/View/GetStatus"
+      data-flashnewsurl="/Home/FlashNews"
+      data-homeurl="/">
+
+    <div class="cookie-banner" style="
+        background: #f5f5f0;
+        display: none;
+        border-bottom: 1px solid #d4d6d8;
+        min-width: 1055px;">
+    <div class="row">
+        <div class="twelve columns">
+            <div style="padding: 15px;">
+                <h1 style="
+                    color: #6E6259;
+                    margin: 0;
+                    margin-bottom: 12.5px;
+                    padding: 0;
+                    font-size: 1.7rem;">
+                    <span style="
+                        display: inline-block;
+                        padding: 3px 7px;
+                        border-radius: 30px;
+                        background: #6E6259;
+                        color: white;
+                        text-align: center;">!</span>
+                    Cookies
+                </h1>
+                <p>F&#246;r att f&#246;rb&#228;ttra anv&#228;ndarupplevelsen anv&#228;nder den h&#228;r webbplatsen sig utav Cookies. <a href="http://www.pts.se/cookies" target="_blank">L&#228;s mer om Cookies h&#228;r.</a></p>
+                <button class="button">Jag godk&#228;nner</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="container">
+
+        
+
+<header>
+    <div class="row">
+        <div class="header-title eight columns">
+            <div>
+                <img class="header-left" src="/Content/Images/logo-orange.png" alt="Lfv logotyp" />
+                <a class="header" href="/">
+                    <h1>AROWeb – AIS MET och F&#228;rdplanering</h1>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="four columns">
+            <img class="header-right" src="/Content/Images/FPC-big.png" alt="Flight planning centre" />
+            <div class="header-right">
+                <h1 class="header-time" id="header-time"></h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        
+
+<div class="wrapper_menu_full menu_light_theme">
+    <div class="menu menu_aroweb">
+        <ul class="menu_whole_width" id="mainmenu">
+            <li class="nodrop"><a href="/">Hem</a></li>
+            <li class="fullwidth">
+                <a href="/">MET</a>
+
+<div class="dropdown_fullwidth">
+    
+    <div class="col_6 firstcolumn">        <div class="col_1 firstcolumn">
+            <h3>TAF</h3>
+            <ul>
+                
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=315&amp;type=MET" data-opennew="False" data-desktopmode="True">TAF Sverige</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=304&amp;type=MET" data-opennew="False" data-desktopmode="True">TAF Norden</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=305&amp;type=MET" data-opennew="False" data-desktopmode="True">TAF Norra EUR</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=306&amp;type=MET" data-opennew="False" data-desktopmode="True">TAF S&#246;dra EUR</a>
+                    </li>
+
+            </ul>
+        </div>
+        <div class="col_1">
+            <h3>METAR</h3>
+            <ul>
+                
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=314&amp;type=MET" data-opennew="False" data-desktopmode="True">METAR Sverige</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=300&amp;type=MET" data-opennew="False" data-desktopmode="True">METAR Norden</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=301&amp;type=MET" data-opennew="False" data-desktopmode="True">METAR Norra EUR</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=303&amp;type=MET" data-opennew="False" data-desktopmode="True">METAR S&#246;dra EUR</a>
+                    </li>
+
+            </ul>
+        </div>
+        <div class="col_1">
+            <h3>Kartor</h3>
+            <ul>
+                
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=229&amp;type=MET" data-opennew="False" data-desktopmode="True">SWC Norden</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=232&amp;type=MET" data-opennew="False" data-desktopmode="True">VFR analys</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=233&amp;type=MET" data-opennew="False" data-desktopmode="True">VFR Prognos 06</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=239&amp;type=MET" data-opennew="False" data-desktopmode="True">VFR Prognos 12</a>
+                    </li>
+
+            </ul>
+        </div>
+        <div class="col_1">
+            <h3>SWC/WC EUR</h3>
+            <ul>
+                
+            <li class="link">
+                    <a href="/Links/Link/ShowSWC?time=0000&amp;torlinkName=SWC%2FWC%2000&amp;selectedSourceName=SWC&amp;fileMaxAge=1500&amp;type=MET">SWC/WC 00</a>
+                    
+            </li>           
+            <li class="link">
+                <a href="/Links/Link/ShowSWC?time=0600&amp;torlinkName=SWC%2FWC%2006&amp;selectedSourceName=SWC&amp;fileMaxAge=1500&amp;type=MET">SWC/WC 06</a>
+            </li>
+            <li class="link">
+                <a href="/Links/Link/ShowSWC?time=1200&amp;torlinkName=SWC%2FWC%2012&amp;selectedSourceName=SWC&amp;fileMaxAge=1500&amp;type=MET">SWC/WC 12</a>
+            </li>
+            <li class="link">
+                <a href="/Links/Link/ShowSWC?time=1800&amp;torlinkName=SWC%2FWC%2018&amp;selectedSourceName=SWC&amp;fileMaxAge=1500&amp;type=MET">SWC/WC 18</a>
+            </li>
+
+            </ul>
+        </div>
+        <div class="col_1">
+            <h3>PDF Bulletiner</h3>
+            <ul>
+                
+        <li class="link">
+                <a href="/Links/Link/ShowFileList?type=MET&amp;path=%5CCompany%5C&amp;torlinkName=Bolags%20PIB">Bolags PIB</a>
+        </li>            
+        <li class="link">
+                <a href="/Links/Link/ShowFileList?type=MET&amp;path=%5CMENZIES%5C&amp;torlinkName=Menzies">Menzies</a>
+        </li>            
+        <li class="link">
+                <a href="/Links/Link/ShowFileList?type=MET&amp;path=%5CSAS%5C&amp;torlinkName=SAS">SAS</a>
+        </li>            
+        <li class="link">
+                <a href="/Links/Link/ShowFileList?type=MET&amp;path=%5CROUTE%5C&amp;torlinkName=Route%20PIB">Route PIB</a>
+        </li>            
+        <li class="link">
+                <a href="/Links/Link/ShowFileList?type=MET&amp;path=%5CAREA%5C&amp;torlinkName=Omr%C3%A5des%20PIB">Omr&#229;des PIB</a>
+        </li>            
+        <li class="link">
+                <a href="/Links/Link/ShowFileList?type=MET&amp;path=%5Cadhoc&amp;torlinkName=Special%20PIB">Special PIB</a>
+        </li>            
+
+            </ul>
+        </div>
+        <div class="col_1">
+            <h3>Radar</h3>
+            <ul>
+                
+                     <li class="link">
+<a href="/Home/RedirectToLogin?redirectLinkId=319&amp;redirectLinkCode=MET&amp;redirectLinkUrl=https%3A%2F%2Fportaler.smhi.se%2Flfvradar%2F&amp;redirectLinkName=V%C3%A4derradar&amp;redirectLinkOpenInNewWindow=True&amp;redirectLinkType=MET">V&#228;derradar</a>                    </li>
+
+            </ul>
+        </div>
+</div>
+<div class="col_6 firstcolumn">        <div class="col_1 firstcolumn">
+            <h3>SIGMET</h3>
+            <ul>
+                
+        <li class="link">
+                <a href="/Links/Link/ShowFileList?type=MET&amp;path=%5CAREA%5CSIGMET%5C&amp;torlinkName=SIGMET%2FARS%2FAIRMET">SIGMET/ARS/AIRMET</a>
+        </li>            
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="https://www.northavimet.com/sigmets/" data-opennew="True" data-desktopmode="True">SIGMET visualisering</a>
+                    </li>
+
+            </ul>
+        </div>
+        <div class="col_1">
+            <h3>Advisories</h3>
+            <ul>
+                
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=358&amp;type=MET" data-opennew="False" data-desktopmode="True">TC Advisory</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=359&amp;type=MET" data-opennew="False" data-desktopmode="True">SWX Advisory</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=360&amp;type=MET" data-opennew="False" data-desktopmode="True">VA Advisory</a>
+                    </li>
+
+            </ul>
+        </div>
+        <div class="col_1">
+            <h3>LHP</h3>
+            <ul>
+                
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=310&amp;type=MET" data-opennew="False" data-desktopmode="True">LHP Omr&#229;de 1</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=307&amp;type=MET" data-opennew="False" data-desktopmode="True">LHP Omr&#229;de 2</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=308&amp;type=MET" data-opennew="False" data-desktopmode="True">LHP Omr&#229;de 3</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=309&amp;type=MET" data-opennew="False" data-desktopmode="True">LHP Omr&#229;de 4</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="https://www.northavimet.com/low-level-forecast/denmarksweden/" data-opennew="True" data-desktopmode="True">Grafisk LHP</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=278&amp;type=MET" data-opennew="False" data-desktopmode="True">LHP Karta</a>
+                    </li>
+
+            </ul>
+        </div>
+        <div class="col_1">
+            <h3>VINDAR</h3>
+            <ul>
+                
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=209&amp;type=MET" data-opennew="False" data-desktopmode="True">G&#228;llande 03-09</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=210&amp;type=MET" data-opennew="False" data-desktopmode="True">G&#228;llande 09-15</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=211&amp;type=MET" data-opennew="False" data-desktopmode="True">G&#228;llande 15-21</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=212&amp;type=MET" data-opennew="False" data-desktopmode="True">G&#228;llande 21-03</a>
+                    </li>
+
+            </ul>
+        </div>
+        <div class="col_1">
+            <h3>L&#228;nkar</h3>
+            <ul>
+                
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="https://www.smhi.se/professionella-tjanster/professionella-tjanster/flyg" data-opennew="True" data-desktopmode="True">SMHI Flyg</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="https://www.easa.europa.eu/system/files/dfu/Volcanic-ash-reporting-form.docx" data-opennew="True" data-desktopmode="True">Volcanic Ash Report</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="http://www.smhi.se/polopoly_fs/1.11258!%C3%84ndringskriterier%20TAF.pdf" data-opennew="True" data-desktopmode="True">N&#228;r &#228;ndras TAF</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="https://www.northavimet.com" data-opennew="True" data-desktopmode="True">Northavimet.com</a>
+                    </li>
+
+            </ul>
+        </div>
+</div>
+            </li>
+            <li class="fullwidth">
+                <a href="/">AIS</a>
+
+<div class="dropdown_fullwidth">
+    
+    <div class="col_6 firstcolumn">        <div class="col_1 firstcolumn">
+            <h3>NOTAM Sverige</h3>
+            <ul>
+                
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=161&amp;type=AIS" data-opennew="False" data-desktopmode="True">Sverige FIR</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=159&amp;type=AIS" data-opennew="False" data-desktopmode="True">Sverige FIR IFR</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=162&amp;type=AIS" data-opennew="False" data-desktopmode="True">Sverige FIR VFR</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=290&amp;type=AIS" data-opennew="False" data-desktopmode="True">Sverige FIR Hkp</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=347&amp;type=AIS" data-opennew="False" data-desktopmode="True">&#214;ppeth&#229;llning</a>
+                    </li>
+
+            </ul>
+        </div>
+        <div class="col_1">
+            <h3>NOTAM Norden</h3>
+            <ul>
+                
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=163&amp;type=AIS" data-opennew="False" data-desktopmode="True">Norge FIR</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=164&amp;type=AIS" data-opennew="False" data-desktopmode="True">Finland FIR</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=160&amp;type=AIS" data-opennew="False" data-desktopmode="True">K&#246;penhamn FIR</a>
+                    </li>
+
+            </ul>
+        </div>
+        <div class="col_1">
+            <h3>NOTAM Norra EUR</h3>
+            <ul>
+                
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=166&amp;type=AIS" data-opennew="False" data-desktopmode="True">Tallinn FIR</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=167&amp;type=AIS" data-opennew="False" data-desktopmode="True">Riga FIR</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=168&amp;type=AIS" data-opennew="False" data-desktopmode="True">Vilnius FIR</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=169&amp;type=AIS" data-opennew="False" data-desktopmode="True">Warszawa FIR</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=170&amp;type=AIS" data-opennew="False" data-desktopmode="True">Bremen FIR</a>
+                    </li>
+
+            </ul>
+        </div>
+        <div class="col_1">
+            <h3>Narrow route IFR</h3>
+            <ul>
+                
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=171&amp;type=AIS" data-opennew="False" data-desktopmode="True">SA/SB-NU/EFVA</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=172&amp;type=AIS" data-opennew="False" data-desktopmode="True">SA/SB-MS/EKCH </a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="/Links/Link/ViewLink?TorLinkId=173&amp;type=AIS" data-opennew="False" data-desktopmode="True">SA/SB-GG/GP</a>
+                    </li>
+
+            </ul>
+        </div>
+        <div class="col_1">
+            <h3>IAIP</h3>
+            <ul>
+                
+            <li class="link">
+                <a href="/Editorial/View/IAIP">Svensk IAIP</a>
+            </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="https://www.lfv.se/adq" data-opennew="True" data-desktopmode="True">ADQ</a>
+                    </li>
+
+            </ul>
+        </div>
+        <div class="col_1">
+            <h3>L&#228;nkar</h3>
+            <ul>
+                
+        <li class="link">
+            <a href="/Editorial/View/GeneralDocument?torLinkId=337&amp;type=AIS&amp;folderId=77">Restriktionsomr&#229;de</a>
+        </li>
+        <li class="link">
+            <a href="/Editorial/View/GeneralDocument?torLinkId=345&amp;type=AIS&amp;folderId=78">Sverige PIB EAD</a>
+        </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="https://www.eurocontrol.int/articles/ais-online" data-opennew="True" data-desktopmode="True">AIS - Online</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="https://dronechart.lfv.se/" data-opennew="True" data-desktopmode="True">Dr&#246;narflygning</a>
+                    </li>
+
+            </ul>
+        </div>
+</div>
+            </li>
+            <li class="fullwidth">
+                <a href="/">Bulletiner</a>
+
+<div class="dropdown_fullwidth">
+    
+    </div>
+            </li>
+            <li class="fullwidth">
+                <a href="/">F&#228;rdplan</a>
+
+<div class="dropdown_fullwidth">
+    
+<div class="col_6 firstcolumn">        <div class="col_1 firstcolumn">
+            <h3>Skapa f&#228;rdplan</h3>
+
+            <ul>
+
+                <li id="createNewFlightPlan"
+                    data-confirm="Om du har en p&#229;g&#229;ende f&#228;rdplan som du arbetar med kommer denna att ers&#228;ttas med en ny tom f&#228;rdplan. &#196;r du s&#228;ker p&#229; att du vill forts&#228;tta?"
+                    data-url="/Home/RedirectToLogin?redirectLinkId=0&amp;redirectLinkCode=CreateNewFPL">
+                    <a href="#">Ny</a>
+                </li>
+                <li><a href="/Home/RedirectToLogin?redirectLinkId=0&amp;redirectLinkCode=ImportFlightPlan">Importera ATS</a></li>
+                <li><a href="/Home/RedirectToLogin?redirectLinkId=0&amp;redirectLinkCode=FlightplanFromTemplate">Fr&#229;n mall</a></li>
+            </ul>
+        </div>
+        <div class="col_1">
+            <h3>Skickade f&#228;rdplaner</h3>
+            <ul>
+                <li><a href="/Home/RedirectToLogin?redirectLinkId=0&amp;redirectLinkCode=AnsweredFlightPlans">Besvarade</a></li>
+                <li><a href="/Home/RedirectToLogin?redirectLinkId=0&amp;redirectLinkCode=UnansweredFlightPlans">Obesvarade</a></li>
+                <li><a href="/Home/RedirectToLogin?redirectLinkId=0&amp;redirectLinkCode=ArchivedFlightPlans">Arkiverade</a></li>
+                <li><a href="/Home/RedirectToLogin?redirectLinkId=0&amp;redirectLinkCode=FlightPlanStatistic">Statistik</a></li>
+            </ul>
+        </div>
+        <div class="col_1">
+            <h3>Hantera mallar</h3>
+            <ul>
+                <li><a href="/Home/RedirectToLogin?redirectLinkId=0&amp;redirectLinkCode=AircraftTemplates">Luftfartyg</a></li>
+                <li><a href="/Home/RedirectToLogin?redirectLinkId=0&amp;redirectLinkCode=RouteTemplates">Flygv&#228;g</a></li>
+                <li><a href="/Home/RedirectToLogin?redirectLinkId=0&amp;redirectLinkCode=ImportTemplates">Importera mall</a></li>
+            </ul>
+        </div>
+            <div class="col_1">
+            <h3>L&#228;nkar</h3>
+            <ul>
+                
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="https://contentzone.eurocontrol.int/fpl/" data-opennew="True" data-desktopmode="True">Flight Plan Guide</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="https://www.transportstyrelsen.se/sv/luftfart/e-tjanster-och-blanketter/e-tjanster-inom-luftfart/luftfartstjanster/rapportera-luftfartshandelse/rapportera-luftfartshandelse/" data-opennew="True" data-desktopmode="True">Rapportera h&#228;ndelse</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="https://www.eurocontrol.int/sites/default/files/content/documents/nm/network-operations/HANDBOOK/atfcm-users-manual-current.pdf" data-opennew="True" data-desktopmode="True">Tolka CTOT</a>
+                    </li>
+                     <li class="link">
+                                <a class="ais-link" href="#" data-url="http://www.icao.int/publications/doc8643/pages/default.aspx" data-opennew="True" data-desktopmode="True">Luftfartygs-typer</a>
+                    </li>
+
+            </ul>
+        </div>
+</div>
+            </li>
+
+
+            <li>
+                <a href="/Home/About">Hj&#228;lp</a>
+                <div class="user-settings dropdown_1column align_right">
+                    <div class="col_1">
+                        <ul>
+                            <li><a href="/Home/About">Om AROWeb</a></li>
+                            <li><a href="/Editorial/View/General/0/UserGuideSE" target="_blank">Anv&#228;ndarmanual</a></li>
+                            <li><a href="/Editorial/View/Information">Information</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nodrop"><a href="/Settings/Contact">Kontakta oss</a></li>
+
+            <li class="right">
+<a class="header-mobile-link" href="/ViewSwitcher/SwitchView?mobile=True&amp;returnUrl=%2FLinks%2FLink%2FViewLink%3FTorLinkId%3D315%26type%3DMET">Mobilsida</a>            </li>
+
+            <li class="right language">
+<a class="flagWidget" href="/Settings/Language/Change">
+        <img src="/Areas/Settings/Content/Images/EN.png" alt="English" />
+</a></li>
+
+            <li class="right" id="other">
+<a href="/Home/Login">Logga in</a>            </li>
+        </ul>
+    </div>
+</div>
+
+    </div>
+</header>
+
+
+
+        <div class="login-required-message inactivated-flight-planning-message" style="display:none;">
+            <p>F&#228;rdplansinl&#228;mningen &#228;r f&#246;r tillf&#228;llet inaktiverad</p>
+        </div>
+
+        <div class="login-required-message flash-news-container" style="display: none;">
+        </div>
+
+        <div class="content row">
+            
+<div class="row">
+    <section class="panel">
+        <h1>TAF Sverige</h1>
+
+    <div class="text"><p><a href="https://aro.lfv.se/" data-mce-href="https://aro.lfv.se/">START</a> - <strong><a href="https://aro.lfv.se/Links/Link/ViewLink?TorLinkId=315&amp;type=MET" data-mce-href="https://aro.lfv.se/Links/Link/ViewLink?TorLinkId=315&amp;type=MET">TAF</a></strong> - <a href="https://aro.lfv.se/Links/Link/ViewLink?TorLinkId=314&amp;type=MET" data-mce-href="https://aro.lfv.se/Links/Link/ViewLink?TorLinkId=314&amp;type=MET">METAR</a>&nbsp;- <a class="ais-link" href="https://aro.lfv.se/Links/Link/ViewLink?TorLinkId=314&amp;type=MET#" data-mce-href="https://aro.lfv.se/Links/Link/ViewLink?TorLinkId=314&amp;type=MET" data-url="/Links/Link/ViewLink?TorLinkId=229&amp;type=MET" data-desktopmode="True" data-opennew="False">NSWC</a><br>&nbsp;<br></p></div>
+
+                <div class="tor-link-text-table">
+                            <div class="tor-link-text-row no-background">
+                                <span class="tor-link-text-row-item item-header"></span>
+                                <span class="tor-link-text-row-item item-text">Last updated Tue Jul 25 10:30:02 UTC 2023</span>
+                            </div>
+                            <div class="tor-link-text-row no-background">
+                                <span class="tor-link-text-row-item item-header">ESDF</span>
+                                <span class="tor-link-text-row-item item-text">AMD 250927Z 2509/2518 28010KT 9999 SCT025 PROB40 2509/2515 SCT035TCU=</span>
+                            </div>
+                            <div class="tor-link-text-row">
+                                <span class="tor-link-text-row-item item-header">ESGG</span>
+                                <span class="tor-link-text-row-item item-text">250830Z 2509/2609 24013KT 9999 BKN020 PROB40 2510/2517 SCT025TCU TEMPO 2605/2609 SHRA SCT020CB=</span>
+                            </div>
+                            <div class="tor-link-text-row no-background">
+                                <span class="tor-link-text-row-item item-header">ESGJ</span>
+                                <span class="tor-link-text-row-item item-text">250830Z 2509/2518 23014KT 9999 BKN025=</span>
+                            </div>
+                            <div class="tor-link-text-row">
+                                <span class="tor-link-text-row-item item-header">ESGP</span>
+                                <span class="tor-link-text-row-item item-text">250830Z 2509/2518 24015KT 9999 BKN020 PROB40 2510/2515 SCT025TCU=</span>
+                            </div>
+                            <div class="tor-link-text-row no-background">
+                                <span class="tor-link-text-row-item item-header">ESKN</span>
+                                <span class="tor-link-text-row-item item-text">250830Z 2509/2609 25007KT CAVOK PROB40 2512/2516 SCT045TCU=</span>
+                            </div>
+                            <div class="tor-link-text-row">
+                                <span class="tor-link-text-row-item item-header">ESMK</span>
+                                <span class="tor-link-text-row-item item-text">250803Z 2509/2514 27012KT 9999 SCT025=</span>
+                            </div>
+                            <div class="tor-link-text-row no-background">
+                                <span class="tor-link-text-row-item item-header">ESMQ</span>
+                                <span class="tor-link-text-row-item item-text">250830Z 2509/2515 28012KT 9999 SCT020 PROB40 2510/2515 SCT040TCU=</span>
+                            </div>
+                            <div class="tor-link-text-row">
+                                <span class="tor-link-text-row-item item-header">ESMS</span>
+                                <span class="tor-link-text-row-item item-text">250803Z 2509/2609 28014KT 9999 FEW017 SCT025 TEMPO 2512/2518 SCT020TCU TEMPO 2600/2609 SCT020CB=</span>
+                            </div>
+                            <div class="tor-link-text-row no-background">
+                                <span class="tor-link-text-row-item item-header">ESMT</span>
+                                <span class="tor-link-text-row-item item-text">250803Z 2509/2517 28014KT 9999 SCT025 TEMPO 2512/2517 SCT020TCU=</span>
+                            </div>
+                            <div class="tor-link-text-row">
+                                <span class="tor-link-text-row-item item-header">ESNG</span>
+                                <span class="tor-link-text-row-item item-text">250830Z 2509/2518 04005KT 9999 BKN012 BECMG 2510/2512 BKN015=</span>
+                            </div>
+                            <div class="tor-link-text-row no-background">
+                                <span class="tor-link-text-row-item item-header">ESNO</span>
+                                <span class="tor-link-text-row-item item-text">250830Z 2509/2512 05008KT 9999 BKN008 BECMG 2509/2510 BKN015=</span>
+                            </div>
+                            <div class="tor-link-text-row">
+                                <span class="tor-link-text-row-item item-header">ESNQ</span>
+                                <span class="tor-link-text-row-item item-text">250830Z 2509/2518 03005KT 9999 SCT003 BKN010 TEMPO 2509/2512 BKN005 BECMG 2512/2514 BKN015=</span>
+                            </div>
+                            <div class="tor-link-text-row no-background">
+                                <span class="tor-link-text-row-item item-header">ESNS</span>
+                                <span class="tor-link-text-row-item item-text">250830Z 2509/2518 36005KT 9999 SCT015 BKN020 TEMPO 2509/2511 BKN012 SCT030CB PROB40 2509/2510 BKN009=</span>
+                            </div>
+                            <div class="tor-link-text-row">
+                                <span class="tor-link-text-row-item item-header">ESNU</span>
+                                <span class="tor-link-text-row-item item-text">250830Z 2509/2518 01005KT 9999 SCT020 BKN030 PROB40 2513/2515 BKN014=</span>
+                            </div>
+                            <div class="tor-link-text-row no-background">
+                                <span class="tor-link-text-row-item item-header">ESNZ</span>
+                                <span class="tor-link-text-row-item item-text">250930Z 2510/2514 07007KT 9999 SCT030 BKN040 TEMPO 2510/2514 SHRA BKN030CB=</span>
+                            </div>
+                            <div class="tor-link-text-row">
+                                <span class="tor-link-text-row-item item-header">ESNX</span>
+                                <span class="tor-link-text-row-item item-text">AMD 250927Z 2509/2510 VRB03KT 9999 OVC015 PROB40 2509/2510 4000 DZ BR BKN007=</span>
+                            </div>
+                            <div class="tor-link-text-row no-background">
+                                <span class="tor-link-text-row-item item-header">ESOE</span>
+                                <span class="tor-link-text-row-item item-text">250530Z 2506/2509 19007KT 9999 BKN007 PROB40 2506/2509 4000 DZ SCT007 BKN015=</span>
+                            </div>
+                            <div class="tor-link-text-row">
+                                <span class="tor-link-text-row-item item-header">ESOK</span>
+                                <span class="tor-link-text-row-item item-text">250830Z 2509/2514 22006KT 9999 SCT008 BKN012 BECMG 2509/2511 BKN020=</span>
+                            </div>
+                            <div class="tor-link-text-row no-background">
+                                <span class="tor-link-text-row-item item-header">ESOW</span>
+                                <span class="tor-link-text-row-item item-text">250830Z 2509/2518 16006KT 9999 BKN017=</span>
+                            </div>
+                            <div class="tor-link-text-row">
+                                <span class="tor-link-text-row-item item-header">ESPA</span>
+                                <span class="tor-link-text-row-item item-text">250830Z 2509/2518 36006KT 9999 BKN020=</span>
+                            </div>
+                            <div class="tor-link-text-row no-background">
+                                <span class="tor-link-text-row-item item-header">ESSA</span>
+                                <span class="tor-link-text-row-item item-text">250830Z 2509/2609 14006KT 9999 SCT008 PROB40 TEMPO 2509/2511 4000 SHRA BKN008 BKN025CB BECMG 2513/2515 26010KT=</span>
+                            </div>
+                            <div class="tor-link-text-row">
+                                <span class="tor-link-text-row-item item-header">ESSB</span>
+                                <span class="tor-link-text-row-item item-text">250830Z 2509/2518 17005KT 9999 SCT010 PROB40 TEMPO 2509/2511 4000 SHRA BKN008 BKN025CB BECMG 2513/2515 27010KT=</span>
+                            </div>
+                            <div class="tor-link-text-row no-background">
+                                <span class="tor-link-text-row-item item-header">ESSD</span>
+                                <span class="tor-link-text-row-item item-text">250830Z 2509/2514 12008KT 9000 -DZ SCT012 BKN015 TEMPO 2509/2514 4000 SHRA BKN007 BKN020CB=</span>
+                            </div>
+                            <div class="tor-link-text-row">
+                                <span class="tor-link-text-row-item item-header">ESSP</span>
+                                <span class="tor-link-text-row-item item-text">250830Z 2509/2515 24008KT 9999 SCT015 BKN030 PROB40 2511/2514 SCT040TCU=</span>
+                            </div>
+                            <div class="tor-link-text-row no-background">
+                                <span class="tor-link-text-row-item item-header">ESSV</span>
+                                <span class="tor-link-text-row-item item-text">250830Z 2509/2518 27008KT 9999 SCT030 PROB40 2509/2511 BKN006=</span>
+                            </div>
+                            <div class="tor-link-text-row">
+                                <span class="tor-link-text-row-item item-header">ESTA</span>
+                                <span class="tor-link-text-row-item item-text">250803Z 2509/2518 28014KT 9999 SCT025 TEMPO 2512/2518 SCT020TCU=</span>
+                            </div>
+                </div>
+
+    </section>
+</div>
+
+
+        </div>
+
+        <footer>
+    <div class="row">
+        <h1>Systemkrav</h1>
+    </div>
+    <div class="row">
+        <div class="six columns">
+            <ul>
+                <li>
+                    <p>AROWeb &#228;r optimerad f&#246;r IE 11, Firefox 64, Chrome 71 och iPad (IOS 12). Mobilsiten &#228;r optimerad f&#246;r IOS 12 Iphone/iPad och Android 8. &#196;ldre versioner &#228;r inte verifierade och full funktionalitet kan inte garanteras i &#246;vriga webbl&#228;sare eller smartphones/tablets.</p>
+                </li>
+            </ul>
+        </div>
+        <div class="three columns">
+            <ul>
+                <li>
+                    <p>LFV har ett integrerat ledningssystem som &#228;r certifierat mot ISO9001- och 14001 samt uppfyller kraven i ISO27001 och 15489</p>
+                </li>
+            </ul>
+        </div>
+        <div class="three columns">
+            <ul>
+                <li>
+                    <p>Utvecklad av Gaia System AB<br /> 3.14.3.0</p>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</footer>
+
+        <script src="/Scripts/Vendor/Tipsy/jquery.tipsy.js?v=3.14.3.0" type="text/javascript"></script>
+<script src="/Scripts/Vendor/jQuery/jquery.unobtrusive-ajax.min.js?v=3.14.3.0" type="text/javascript"></script>
+<script src="/Scripts/Vendor/jQueryUIMultiselectWidget/jquery-ui-multiselect-widget.min.js?v=3.14.3.0" type="text/javascript"></script>
+<script src="/Scripts/Vendor/jQueryValidation/jquery.validate.js?v=3.14.3.0" type="text/javascript"></script>
+<script src="/Scripts/Vendor/Mustache/mustache.js?v=3.14.3.0" type="text/javascript"></script>
+<script src="/Scripts/Vendor/Amplify/amplify.min.js?v=3.14.3.0" type="text/javascript"></script>
+<script src="/Scripts/app.js?v=3.14.3.0" type="text/javascript"></script>
+<script src="/Scripts/Validation.js?v=3.14.3.0" type="text/javascript"></script>
+<script src="/Scripts/Tooltips.js?v=3.14.3.0" type="text/javascript"></script>
+<script src="/Scripts/DatePicker.js?v=3.14.3.0" type="text/javascript"></script>
+<script src="/Scripts/utc.js?v=3.14.3.0" type="text/javascript"></script>
+<script src="/Scripts/Cookies.js?v=3.14.3.0" type="text/javascript"></script>
+<script src="/Scripts/FlashNews.js?v=3.14.3.0" type="text/javascript"></script>
+
+
+
+<script src="/Scripts/Vendor/Mobiscroll/mobiscroll-1.5.3.min.js" type="text/javascript"></script>
+    </div>
+</body>
+</html>
